@@ -15,9 +15,9 @@ spring:
       
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cleanGarbage?serverTimezone=Asia/Seoul
-    username: cleanGarbage
-    password: cleanGarbage123456789a
+    url: jdbc:mysql://localhost:3306/blogStudy?serverTimezone=Asia/Seoul
+    username: cosStudy
+    password: cos1234
     
   jpa:
     open-in-view: true
