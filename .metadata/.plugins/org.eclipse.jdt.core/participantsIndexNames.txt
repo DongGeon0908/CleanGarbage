@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+D:\study\cleanGarbage\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2880239956.index
+\cleanGarbage\src\main\java
+D:\study\cleanGarbage\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\206335068.index
+\cleanGarbage\src\main\java
+D:\study\cleanGarbage\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3459288411.index
+\cleanGarbage\src\main\java
+D:\study\cleanGarbage\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3195523310.index
+\cleanGarbage\src\main\java

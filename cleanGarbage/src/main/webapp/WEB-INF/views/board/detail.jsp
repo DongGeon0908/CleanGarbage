@@ -12,9 +12,13 @@
 	</c:if>
 	<br /> <br />
 	<div>
-		글 번호 : <span id="id"><i>${board.id} </i></span> 작성자 : <span><i>${board.user.username}
-		</i></span>
+		글 번호 : <span id="id"><i>${board.id} </i></span> 
+		<br />
+		작성자 : <span><i>${board.user.username}</i></span>
+		<br />
+		작성시간 : <span><i>${board.createDate}</i></span>
 	</div>
+	<hr />
 	<br />
 	<div>
 		<h3>${board.title}</h3>

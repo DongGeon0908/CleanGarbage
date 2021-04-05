@@ -3,9 +3,9 @@
 
 <br />
 <div class="jumbotron text-center" style="margin-bottom:0">
-  <p>🎢Created By DongGeon🎢</p>
-  <p>😍010-3182-9709😍</p>
-  <p>🎗서울시 영등포구 신길7동🎗</p>
+  <p>🎢 Created By DongGeon 🎢</p>
+  <p>😍 010-3182-9709 😍</p>
+  <p>🎗 wrjs@naver.com 🎗</p>
 </div>
 </body>
 </html>
