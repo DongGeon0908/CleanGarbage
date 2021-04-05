@@ -4,10 +4,7 @@
 <%@ include file="layout/header.jsp"%>
 
 
-<div class="container">
-인덱스 페이지
-
-</div>
+<div class="container">인덱스</div>
 
 <%@ include file="layout/footer.jsp"%>
 

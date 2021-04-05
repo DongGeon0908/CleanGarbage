@@ -5,6 +5,7 @@
 
 
 <div class="container">
+	보드
 	<c:forEach var="board" items="${boards.content}">
 		<div class="card m-2">
 			<div class="card-body">

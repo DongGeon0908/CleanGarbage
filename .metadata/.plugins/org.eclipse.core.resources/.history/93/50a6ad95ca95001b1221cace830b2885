@@ -24,7 +24,7 @@ public class BoardController {
 	public String board(Model model, @PageableDefault(size=5, sort="id", direction = Sort.Direction.DESC) Pageable pageable) {
 		// /WEB-INF/views/index.jsp
 	model.addAttribute("boards", boardService.글목록(pageable));
-	return "board/board"; // viewResolver 작동
+	return "index"; // viewResolver 작동
 	}
 	
 	@GetMapping("/board/{id}")
