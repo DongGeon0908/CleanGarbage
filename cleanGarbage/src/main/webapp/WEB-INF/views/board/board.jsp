@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@ include file="layout/header.jsp"%>
+<%@ include file="../layout/header.jsp"%>
 
 
 <div class="container">
-	인덱스
-
+	보드
 	<c:forEach var="board" items="${boards.content}">
 		<div class="card m-2">
 			<div class="card-body">
@@ -43,5 +42,5 @@
 
 </div>
 
-<%@ include file="layout/footer.jsp"%>
+<%@ include file="../layout/footer.jsp"%>
 
