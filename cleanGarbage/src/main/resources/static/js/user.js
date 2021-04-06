@@ -105,7 +105,14 @@ let index = {
 			contentType: "application/json; charset=utf-8", // body 데이터가 어떤 타입인지(MIME)
 			dataType: "json" // 요청을 서버로해서 응답이 왔을 때 기본적으로 모든 것이 문자열 -> 생긴게 JSON이면 javascript Object로 변환
 		}).done(function(resp) {
-			alert("회원수정이 완료되었습니다.");
+			swal({
+					title: "Good job!",
+					text: "회원수정이 완료되었습니다!",
+					icon: "success",
+					button: "OK",
+				}).then(() => {
+					location.href = "/";
+				});
 			alert(resp);
 			console.log(resp);
 			location.href = "/";
