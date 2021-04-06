@@ -26,7 +26,7 @@
 				placeholder="Enter email" id="email" readOnly>
 		</div>
 	</form>
-	<button id="btn-update" class="btn btn-primary">회원수정완료</button>
+	<button id="btn-update" class="btn btn-info">회원수정완료</button>
 </div>
 
 <script src="/js/user.js"></script>

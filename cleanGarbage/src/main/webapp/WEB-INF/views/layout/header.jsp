@@ -37,7 +37,7 @@
 	rel="stylesheet">
 <script
 	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-	
+
 <!-- alert창 꾸미기 -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
@@ -67,8 +67,7 @@
 						<li class="nav-item"><a class="nav-link" href="#">채팅</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="/user/updateForm">회원정보</a></li>
-						<li class="nav-item"><a class="nav-link"
-							href="#">쓰레기</a></li>	
+						<li class="nav-item"><a class="nav-link" href="#">쓰레기</a></li>
 						<li class="nav-item"><a class="nav-link" href="/logout">로그아웃</a></li>
 					</ul>
 				</c:otherwise>

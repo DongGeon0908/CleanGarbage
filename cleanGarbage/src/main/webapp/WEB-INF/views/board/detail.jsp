@@ -35,7 +35,7 @@
 				<textarea id="reply-content" class="form-control" rows="1"></textarea>
 			</div>
 			<div class="card-footer">
-				<button type="button" id="btn-reply-save" class="btn btn-primary">등록</button>
+				<button type="button" id="btn-reply-save" class="btn btn-info">등록</button>
 			</div>
 		</form>
 
