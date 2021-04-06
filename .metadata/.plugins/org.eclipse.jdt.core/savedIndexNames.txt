@@ -41,7 +41,6 @@ INDEX VERSION 1.131+D:\study\cleanGarbage\.metadata\.plugins\org.eclipse.jdt.cor
 783894746.index
 4064346878.index
 4125081552.index
-3950541793.index
 468607596.index
 985765714.index
 3241006616.index
