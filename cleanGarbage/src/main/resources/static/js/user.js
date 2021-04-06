@@ -33,10 +33,23 @@ let index = {
 			dataType: "json" // 요청을 서버로해서 응답이 왔을 때 기본적으로 모든 것이 문자열 -> 생긴게 JSON이면 javascript Object로 변환
 		}).done(function(resp) {
 			if (resp.status === 500) {
-				alert("회원가입에 실패했습니다.");
+				swal({
+					title: "Fail...",
+					text: "회원가입에 실패했습니다.",
+					icon: "warning",
+					button: "Sign",
+				}).then(() => {
+					location.href = "/auth/joinForm";
+				});
 			} else {
-				alert("회원가입이 완료되었습니다.");
-				location.href = "/";
+				swal({
+					title: "Good job!",
+					text: "회원가입을 축하드립니다!",
+					icon: "success",
+					button: "Login",
+				}).then(() => {
+					location.href = "/auth/loginForm";
+				});
 			}
 		}).fail(function(error) {
 			alert(JSON.stringify(error));

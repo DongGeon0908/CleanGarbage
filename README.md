@@ -12,3 +12,5 @@
 <br>
 
 ### 🔗Link
+
+- [예쁜 Alert](https://sweetalert.js.org/guides/#getting-started)

@@ -4,6 +4,7 @@
 <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 
+
 <!-- Spring Security -->
 <sec:authorize access="isAuthenticated()">
 	<sec:authentication property="principal" var="principal" />
@@ -36,7 +37,9 @@
 	rel="stylesheet">
 <script
 	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-
+	
+<!-- alert창 꾸미기 -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 
