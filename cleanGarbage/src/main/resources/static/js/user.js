@@ -113,9 +113,6 @@ let index = {
 				}).then(() => {
 					location.href = "/";
 				});
-			alert(resp);
-			console.log(resp);
-			location.href = "/";
 		}).fail(function(error) {
 			alert(JSON.stringify(error));
 		}); // ajax 통신을 이용해서 3개의 데이터를 json으로 변경해서 insert 요청 진행!!
