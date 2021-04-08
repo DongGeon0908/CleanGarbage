@@ -17,7 +17,7 @@
 		작성자 아이디 : <span><i>${board.user.username}</i></span>
 		<br />
 		-->
-		별명 : <span><i>${board.user.nickname}</i></span> <br /> 작성시간 : <span><i>${board.createDate}</i></span>
+		작성자 : <span><i>${board.user.nickname}</i></span> <br /> 작성시간 : <span><i>${board.createDate}</i></span>
 	</div>
 	<hr />
 	<br />
