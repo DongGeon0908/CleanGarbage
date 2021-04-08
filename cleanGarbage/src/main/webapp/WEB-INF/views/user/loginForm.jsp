@@ -7,14 +7,14 @@
 <div class="container">
 	<form action="/auth/loginProc" method="post">
 		<div class="form-group">
-			<label for="username">Username:</label> <input type="text"
-				name="username" class="form-control" placeholder="Enter Username"
-				id="username">
+			<label for="username"><strong>Userid</strong></label> <input
+				type="text" name="username" class="form-control"
+				placeholder="Enter Username" id="username">
 		</div>
 		<div class="form-group">
-			<label for="pwd">Password:</label> <input type="password"
-				name="password" class="form-control" placeholder="Enter password"
-				id="password">
+			<label for="pwd"><strong>Password</strong></label> <input
+				type="password" name="password" class="form-control"
+				placeholder="Enter password" id="password">
 		</div>
 		<div class="form-group form-check">
 			<label class="form-check-label"> <input name="remember"

@@ -7,15 +7,16 @@
 <div class="container">
 	<form>
 		<div class="form-group">
-			<label for="username">Username:</label> <input type="text"
-				class="form-control" placeholder="Enter Username" id="username">
+			<label for="username"><strong>Id</strong></label> <input type="text"
+				class="form-control" placeholder="Enter id" id="username">
 		</div>
 		<div class="form-group">
-			<label for="pwd">Password:</label> <input type="password"
-				class="form-control" placeholder="Enter password" id="password">
+			<label for="pwd"><strong>Password</strong></label> <input
+				type="password" class="form-control" placeholder="Enter password"
+				id="password">
 		</div>
 		<div class="form-group">
-			<label for="email">Email:</label> <input type="email"
+			<label for="email"><strong>Email</strong></label> <input type="email"
 				class="form-control" placeholder="Enter email" id="email">
 		</div>
 	</form>
