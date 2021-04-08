@@ -9,14 +9,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Member {
 	private int id;
+	private String nickname;
 	private String username;
 	private String password;
 	private String email;
-	
+
 	@Builder
-	public Member(int id, String username, String password, String email) {
+	public Member(int id, String nickname, String username, String password, String email) {
 		super();
 		this.id = id;
+		this.nickname = nickname;
 		this.username = username;
 		this.password = password;
 		this.email = email;

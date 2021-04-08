@@ -55,8 +55,11 @@ public class UserService {
 		if (persistance.getOauth() == null || persistance.getOauth().equals("")) {
 			String rawPassword = user.getPassword();
 			String encPassword = encoder.encode(rawPassword);
+			persistance.setNickname(user.getNickname());
 			persistance.setPassword(encPassword);
 			persistance.setEmail(user.getEmail());
+		} else if (persistance.getOauth().equals("kakao")) {
+			persistance.setNickname(user.getNickname());
 		}
 
 		// 회원수정 함수 종료 = 서비스 종료 = 트랜잭션 종료 = commit 자동 진행 = 영속화된 persistance 객체의 변화가 감지되면

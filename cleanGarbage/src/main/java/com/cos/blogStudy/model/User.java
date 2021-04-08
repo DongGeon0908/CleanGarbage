@@ -37,6 +37,9 @@ public class User {
 	@Column(nullable = false, length = 100, unique = true)
 	private String username; // ID
 
+	@Column(length = 50)
+	private String nickname; // 별명
+
 	@Column(nullable = false, length = 100) // 해쉬값이 들어가서 길이가 길어야함
 	private String password;
 

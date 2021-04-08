@@ -8,24 +8,30 @@
 	<form>
 		<input type="hidden" id="id" value="${principal.user.id}" />
 		<div class="form-group">
-			<label for="username"><strong>Userid</strong></label> <input
-				type="text" class="form-control" value="${principal.user.username}"
+			<label for="username">Username:</label> <input type="text"
+				class="form-control" value="${principal.user.username}"
 				placeholder="Enter Username" id="username" readonly>
 		</div>
 
 		<c:if test="${empty principal.user.oauth}">
 			<div class="form-group">
-				<label for="pwd"><strong>Password</strong></label> <input
-					type="password" class="form-control" placeholder="Enter password"
-					id="password">
+				<label for="pwd">Password:</label> <input type="password"
+					class="form-control" placeholder="Enter password" id="password">
 			</div>
 		</c:if>
 
 		<div class="form-group">
-			<label for="email"><strong>Email</strong></label> <input type="email"
+			<label for="email">Email:</label> <input type="email"
 				class="form-control" value="${principal.user.email}"
 				placeholder="Enter email" id="email" readOnly>
 		</div>
+		<div class="form-group">
+			<label for="nickname">Nickname:</label> <input type="text"
+				class="form-control" value="${principal.user.nickname}"
+				placeholder="Enter nickname" id="nickname">
+		</div>
+		
+		
 	</form>
 	<button id="btn-update" class="btn btn-info">회원수정완료</button>
 </div>

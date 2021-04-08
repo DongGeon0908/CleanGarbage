@@ -12,11 +12,12 @@
 	</c:if>
 	<br /> <br />
 	<div>
-		글 번호 : <span id="id"><i>${board.id} </i></span> 
+		글 번호 : <span id="id"><i>${board.id} </i></span> <br />
+		<!-- 
+		작성자 아이디 : <span><i>${board.user.username}</i></span>
 		<br />
-		작성자 : <span><i>${board.user.username}</i></span>
-		<br />
-		작성시간 : <span><i>${board.createDate}</i></span>
+		-->
+		별명 : <span><i>${board.user.nickname}</i></span> <br /> 작성시간 : <span><i>${board.createDate}</i></span>
 	</div>
 	<hr />
 	<br />
@@ -45,12 +46,14 @@
 		<div class="card-header">댓글 리스트</div>
 		<ul id="reply-box" class="list-group">
 			<c:forEach var="reply" items="${board.replys}">
-				<li id="reply-${reply.id}" class="list-group-item d-flex justify-content-between">
+				<li id="reply-${reply.id}"
+					class="list-group-item d-flex justify-content-between">
 					<div>${reply.content}</div>
 					<div class="d-flex">
-						<div class="font-italic">작성자 : ${reply.user.username} &nbsp;</div>
+						<div class="font-italic">작성자 : ${reply.user.nickname} &nbsp;</div>
 						<c:if test="${reply.user.id eq principal.user.id}">
-							<button onClick="index.replyDelete(${board.id}, ${reply.id})" class="badge">삭제</button>
+							<button onClick="index.replyDelete(${board.id}, ${reply.id})"
+								class="badge">삭제</button>
 						</c:if>
 					</div>
 				</li>

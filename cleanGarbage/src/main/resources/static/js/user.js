@@ -16,7 +16,8 @@ let index = {
 		let data = {
 			username: $("#username").val(),
 			password: $("#password").val(),
-			email: $("#email").val()
+			email: $("#email").val(),
+			nickname: $("#nickname").val()
 		};
 
 		// console.log(data);
@@ -89,7 +90,8 @@ let index = {
 			id: $("#id").val(),
 			username: $("#username").val(),
 			password: $("#password").val(),
-			email: $("#email").val()
+			email: $("#email").val(),
+			nickname: $("#nickname").val()
 		};
 
 		// console.log(data);

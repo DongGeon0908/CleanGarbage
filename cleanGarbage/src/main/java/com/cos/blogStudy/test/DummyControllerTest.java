@@ -55,7 +55,7 @@ public class DummyControllerTest {
 		});
 
 		user.setPassword(requestUser.getPassword());
-		//user.setEmail(requestUser.getEmail());
+		// user.setEmail(requestUser.getEmail());
 
 		// save()는 id를 전달하지 않으면 insert
 		// save()는 id를 전달하고, id에 대한 데이터가 있으면 update
