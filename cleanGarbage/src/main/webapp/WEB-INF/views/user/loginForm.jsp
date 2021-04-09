@@ -25,6 +25,7 @@
 		<a
 			href="https://kauth.kakao.com/oauth/authorize?client_id=eec07613d4f1977b466e5a6b3834fbd9&redirect_uri=http://localhost:8000/auth/kakao/callback&response_type=code"><img
 			height="38px" src="/image/kakao_login_button.png" /></a>
+		<button id="btn-find" class="btn btn-primary">Find</button>
 	</form>
 </div>
 

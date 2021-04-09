@@ -64,12 +64,11 @@ public class UserController {
 	public String updateForm() {
 		return "user/updateForm";
 	}
-	
+
 	@GetMapping("/user/chat")
 	public String chat() {
 		return "user/chat";
 	}
-	
 
 	@GetMapping("/admin")
 	public String userList(@AuthenticationPrincipal PrincipalDetail principal) {
