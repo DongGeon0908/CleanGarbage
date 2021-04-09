@@ -3,6 +3,8 @@ package com.cos.blogStudy.service;
 import java.security.Principal;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -11,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.cos.blogStudy.model.Board;
 import com.cos.blogStudy.model.RoleType;
 import com.cos.blogStudy.model.User;
 import com.cos.blogStudy.repository.UserRepository;
@@ -76,6 +79,7 @@ public class UserService {
 
 		return user;
 	}
+
 
 	// 하나의 트랜잭션으로 작동!
 	// @Transactional(readOnly = true) // select할 때 트랜잭션 시작, 서비스 종료시에 트랜잭션 종료 -->

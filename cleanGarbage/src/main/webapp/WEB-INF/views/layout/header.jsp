@@ -64,7 +64,7 @@
 						<li class="nav-item"><a class="nav-link" href="/board">게시판</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="/board/saveForm">글쓰기</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">채팅</a></li>
+						<li class="nav-item"><a class="nav-link" href="/user/chat">채팅</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="/user/updateForm">회원정보</a></li>
 						<c:if test="${principal.user.role == 'ADMIN'}">
