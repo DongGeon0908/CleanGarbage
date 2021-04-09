@@ -135,21 +135,23 @@ public class UserController {
 
 		System.out.println("블로그 패스워드 : " + cosKey);
 
+		System.out.println("닉네임 : " + kakaoProfile.getProperties().getNickname());
+
 		User kakaouser = User.builder()
 				.username(kakaoProfile.getKakao_account().getEmail() + "_" + +kakaoProfile.getId()).password(cosKey)
-				.email(kakaoProfile.getKakao_account().getEmail()).oauth("kakao").build();
+				.email(kakaoProfile.getKakao_account().getEmail()).nickname(kakaoProfile.getProperties().getNickname())
+				.oauth("kakao").build();
 
 		User originUser = userService.회원찾기(kakaouser.getUsername());
 
-		String redirectURL = "redirect:/";
 		if (originUser.getUsername() == null) {
 			System.out.println("기존 회원이 아니기에 자동 회원가입을 진행합니다.");
 			userService.회원가입(kakaouser);
-			redirectURL = "redirect:/user/updateForm";
 		}
 
 		System.out.println("자동 로그인을 진행합니다.");
-		/* 카카오 자동 회원가입이 진행된 이후에는 userupdate에서 닉네임을 설정하도록 링크 수정
+		/*
+		 * 카카오 자동 회원가입이 진행된 이후에는 userupdate에서 닉네임을 설정하도록 링크 수정
 		 */
 
 		// 세션 등록
@@ -157,6 +159,6 @@ public class UserController {
 				.authenticate(new UsernamePasswordAuthenticationToken(kakaouser.getUsername(), cosKey));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 
-		return redirectURL;
+		return "redirect:/";
 	}
 }

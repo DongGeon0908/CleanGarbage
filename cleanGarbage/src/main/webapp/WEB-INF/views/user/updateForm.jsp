@@ -20,18 +20,32 @@
 			</div>
 		</c:if>
 
-		<div class="form-group">
-			<label for="email">Email:</label> <input type="email"
-				class="form-control" value="${principal.user.email}"
-				placeholder="Enter email" id="email" readOnly>
-		</div>
-		<div class="form-group">
-			<label for="nickname">Nickname:</label> <input type="text"
-				class="form-control" value="${principal.user.nickname}"
-				placeholder="Enter nickname" id="nickname">
-		</div>
-		
-		
+		<c:choose>
+			<c:when test="${empty principal.user.oauth}">
+				<div class="form-group">
+					<label for="nickname">Nickname:</label> <input type="text"
+						class="form-control" value="${principal.user.nickname}"
+						placeholder="Enter nickname" id="nickname">
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label> <input type="email"
+						class="form-control" value="${principal.user.email}"
+						placeholder="Enter email" id="email">
+				</div>
+			</c:when>
+			<c:otherwise>
+				<div class="form-group">
+					<label for="nickname">Nickname:</label> <input type="text"
+						class="form-control" value="${principal.user.nickname}"
+						placeholder="Enter nickname" id="nickname" readonly>
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label> <input type="email"
+						class="form-control" value="${principal.user.email}"
+						placeholder="Enter email" id="email" readonly>
+				</div>
+			</c:otherwise>
+		</c:choose>
 	</form>
 	<button id="btn-update" class="btn btn-info">회원수정완료</button>
 </div>
