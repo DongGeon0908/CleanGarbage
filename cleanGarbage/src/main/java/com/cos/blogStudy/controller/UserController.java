@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;
@@ -19,8 +20,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
+import com.cos.blogStudy.config.auth.PrincipalDetail;
 import com.cos.blogStudy.model.KakaoProfile;
 import com.cos.blogStudy.model.OAuthToken;
+import com.cos.blogStudy.model.RoleType;
 import com.cos.blogStudy.model.User;
 import com.cos.blogStudy.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -56,6 +59,15 @@ public class UserController {
 	@GetMapping("/user/updateForm")
 	public String updateForm() {
 		return "user/updateForm";
+	}
+
+	@GetMapping("/admin/userList")
+	public String userList(@AuthenticationPrincipal PrincipalDetail principal) {
+		if (principal.getUser().getRole() == RoleType.ADMIN) {
+			return "admin/userList";
+		} else {
+			return "redirect:/";
+		}
 	}
 
 	// 데이터를 return하는 컨트롤러 함수
