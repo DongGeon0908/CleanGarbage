@@ -71,7 +71,7 @@ public class UserController {
 	}
 	
 
-	@GetMapping("/admin/userList")
+	@GetMapping("/admin")
 	public String userList(@AuthenticationPrincipal PrincipalDetail principal) {
 		if (principal.getUser().getRole() == RoleType.ADMIN) {
 			return "admin/userList";

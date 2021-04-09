@@ -68,7 +68,7 @@
 						<li class="nav-item"><a class="nav-link"
 							href="/user/updateForm">회원정보</a></li>
 						<c:if test="${principal.user.role == 'ADMIN'}">
-							<li class="nav-item"><a class="nav-link" href="/admin/userList">쓰레기</a></li>
+							<li class="nav-item"><a class="nav-link" href="/admin">쓰레기</a></li>
 						</c:if>
 						<li class="nav-item"><a class="nav-link" href="/logout">로그아웃</a></li>
 					</ul>
