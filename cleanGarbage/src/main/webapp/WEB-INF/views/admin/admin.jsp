@@ -5,16 +5,35 @@
 
 
 <div class="container">
-	<c:forEach var="user" items="${users.content}">
-		<div class="card m-2">
-			<div class="card-body">
-				<h4 class="card-title">${user.nickname}</h4>
-				<h4 class="card-title">${user.email}</h4>
-				
-				<a href="/user/${user.id}" class="btn btn-info">상세보기</a>
-			</div>
-		</div>
-	</c:forEach>
+
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Role</th>
+				<th>OAuth</th>
+				<th>Username</th>
+				<th>Nickname</th>
+				<th>Email</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="user" items="${users.content}">
+				<tr>
+					<td>${user.id}</td>
+					<td>${user.role}</td>
+					<td>${user.oauth}</td>
+					<td>${user.username}</td>
+					<td>${user.nickname}</td>
+					<td>${user.email}</td>
+					<td><a href="#" class="btn btn-info">####</a></td>
+
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 
 	<ul class="pagination justify-content-center">
 		<c:choose>
