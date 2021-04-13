@@ -71,6 +71,11 @@ public class UserService {
 	}
 
 	@Transactional(readOnly = true)
+	public Page<User> 회원목록(Pageable pageable) {
+		return userRepository.findAll(pageable);
+	}
+
+	@Transactional(readOnly = true)
 	public User 회원찾기(String username) {
 
 		User user = userRepository.findByUsername(username).orElseGet(() -> {

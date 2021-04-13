@@ -21,6 +21,7 @@ import org.springframework.ui.Model;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
@@ -70,14 +71,25 @@ public class UserController {
 		return "user/chat";
 	}
 
+	/*
+	 * @GetMapping("/admin") public String userList(@AuthenticationPrincipal
+	 * PrincipalDetail principal) { if (principal.getUser().getRole() ==
+	 * RoleType.ADMIN) { return "admin/userList"; } else { return "redirect:/"; } }
+	 */
+
 	@GetMapping("/admin")
-	public String userList(@AuthenticationPrincipal PrincipalDetail principal) {
+	public String admin(@AuthenticationPrincipal PrincipalDetail principal, Model model,
+			@PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
+
 		if (principal.getUser().getRole() == RoleType.ADMIN) {
-			return "admin/userList";
+			model.addAttribute("users", userService.회원목록(pageable));
+			return "admin/admin"; // viewResolver 작동
 		} else {
 			return "redirect:/";
 		}
 	}
+	
+
 
 	// 데이터를 return하는 컨트롤러 함수
 	@GetMapping("/auth/kakao/callback")
@@ -182,4 +194,5 @@ public class UserController {
 
 		return "redirect:/";
 	}
+
 }
