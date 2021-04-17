@@ -13,7 +13,7 @@
 				placeholder="Enter Username" id="username" readonly>
 		</div>
 
-		<c:if test="${empty principal.user.oauth}">
+		<c:if test="${principal.user.oauth eq 'default'}">
 			<div class="form-group">
 				<label for="pwd">Password:</label> <input type="password"
 					class="form-control" placeholder="Enter password" id="password">
@@ -21,7 +21,7 @@
 		</c:if>
 
 		<c:choose>
-			<c:when test="${empty principal.user.oauth}">
+			<c:when test="${principal.user.oauth eq 'default'}">
 				<div class="form-group">
 					<label for="nickname">Nickname:</label> <input type="text"
 						class="form-control" value="${principal.user.nickname}"
