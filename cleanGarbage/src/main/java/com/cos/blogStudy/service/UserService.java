@@ -35,6 +35,11 @@ public class UserService {
 		String encPassword = encoder.encode(rawPassword);
 		user.setPassword(encPassword);
 		user.setRole(RoleType.USER);
+
+		if (user.getOauth() == null) {
+			user.setOauth("default");
+		}
+
 		try {
 			userRepository.save(user);
 			return 1;
