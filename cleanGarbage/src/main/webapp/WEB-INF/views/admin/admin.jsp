@@ -28,7 +28,7 @@
 					<td>${user.username}</td>
 					<td>${user.nickname}</td>
 					<td>${user.email}</td>
-					<td><a href="#" class="btn btn-info">####</a></td>
+					<td><a href="#" class="btn btn-info">회원관리</a></td>
 
 				</tr>
 			</c:forEach>
