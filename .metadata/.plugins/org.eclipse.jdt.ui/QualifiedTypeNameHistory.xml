@@ -3,4 +3,5 @@
     <fullyQualifiedTypeName name="com.cos.blogStudy.controller.UserController"/>
     <fullyQualifiedTypeName name="com.cos.blogStudy.model.RoleType"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.ColumnDefault"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.model.Notice"/>
 </qualifiedTypeNameHistroy>
