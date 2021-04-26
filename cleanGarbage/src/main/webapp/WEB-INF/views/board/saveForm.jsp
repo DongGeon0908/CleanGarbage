@@ -11,16 +11,14 @@
 				id="title">
 		</div>
 
+		<!-- 게시판 버튼 설정 -->
 		<c:if test="${principal.user.role eq 'ADMIN'}">
-			<div class="dropdown">
-				<button type="button" class="btn btn-info dropdown-toggle"
-					data-toggle="dropdown">게시판 선택</button>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="#">게시판</a> 
-					<a class="dropdown-item" href="#">공지사항</a>
-				</div>
+			<div class="btn-group">
+				<button type="button" class="btn btn-info">게시판</button>
+				<button type="button" class="btn btn-info">공지사항</button>
 			</div>
 		</c:if>
+		<br /> <br />
 
 		<div class="form-group">
 			<textarea class="form-control summernote" rows="5" id="content"></textarea>
