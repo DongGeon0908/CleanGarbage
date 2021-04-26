@@ -22,6 +22,7 @@ let index = {
 		};
 
 		// console.log(data);
+		// alert(data.kind);
 
 		// ajax 호출시 default가 비동기 호출
 		// ajax 통신을 이용해서 3개의 데이터를 json으로 변경해서 insert 요청
