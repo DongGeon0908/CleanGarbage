@@ -25,6 +25,8 @@
 		작성시간 : <span><i>${board.createDate}</i></span>
 		<br />
 		추천수 : <span><i></i></span>
+		<br />
+		조회수 : <span><i>${board.count}</i></span>
 	</div>
 	<hr />
 	<br />

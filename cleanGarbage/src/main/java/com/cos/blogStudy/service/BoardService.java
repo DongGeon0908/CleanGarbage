@@ -26,7 +26,7 @@ public class BoardService {
 
 	@Autowired
 	private ReplyRepository replyRepository;
-	
+
 	// 하나의 트랜잭션으로 작동!
 	@Transactional
 	public void 글쓰기(Board board, User user) { // title, content
@@ -59,27 +59,36 @@ public class BoardService {
 		}); // 영속화 완료
 		board.setTitle(requestBoard.getTitle());
 		board.setContent(requestBoard.getContent());
-		
-		/* 해당 함수로 종료시 트랜잭션이 종료
-		 *  --> 더티체킹 ( 자동 업데이트가 됨 db flush)
+
+		/*
+		 * 해당 함수로 종료시 트랜잭션이 종료 --> 더티체킹 ( 자동 업데이트가 됨 db flush)
 		 */
 	}
-	
+
+	@Transactional
+	public void 조회수(int id) {
+		// TODO Auto-generated method stub
+		Board board = boardRepository.findById(id).orElseThrow(() -> {
+			return new IllegalArgumentException("글 조회 실패 : 아이디를 찾을 수 없음");
+		}); // 영속화 완료
+		
+		board.setCount(board.getCount() + 1);
+	}
+
 	@Transactional
 	public void 댓글쓰기(User user, int boardId, Reply requestReply) {
-		
-		Board board= boardRepository.findById(boardId).orElseThrow(()->{
+
+		Board board = boardRepository.findById(boardId).orElseThrow(() -> {
 			return new IllegalArgumentException("댓글 쓰기 실패 : 게시글 ID를 찾을 수 없음");
 		});
-		
-		
+
 		requestReply.setUser(user);
 		requestReply.setBoard(board);
-		
+
 		replyRepository.save(requestReply);
-		
+
 	}
-	
+
 	@Transactional
 	public void 댓글삭제(int replyId) {
 		replyRepository.deleteById(replyId);
