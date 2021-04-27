@@ -32,6 +32,7 @@ public class NoticeController {
 	public String findById(@PathVariable int id, Model model) {
 		model.addAttribute("notice", noticeService.공지사항상세보기(id));
 
+		noticeService.조회수(id);
 		return "notice/detail";
 	}
 

@@ -58,4 +58,14 @@ public class NoticeService {
 		 */
 	}
 
+	@Transactional
+	public void 조회수(int id) {
+		// TODO Auto-generated method stub
+		Notice notice = noticeRepository.findById(id).orElseThrow(() -> {
+			return new IllegalArgumentException("글 조회 실패 : 아이디를 찾을 수 없음");
+		}); // 영속화 완료
+
+		notice.setCount(notice.getCount() + 1);
+	}
+
 }

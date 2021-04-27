@@ -5,7 +5,6 @@
 
 
 <div class="container">
-	<h3>공지사항 작성! 주의주의!</h3>
 	<form>
 		<div class="form-group">
 			<input type="text" class="form-control" placeholder="Enter Title"
@@ -21,7 +20,7 @@
 
 <script>
       $('.summernote').summernote({
-        placeholder: '안녕하세요! 오늘은 어떤 하루를 보내실까요?',
+        placeholder: '공지사항 작성입니다! 신중하게~',
         tabsize: 2,
         height: 400
       });
