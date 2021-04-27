@@ -64,7 +64,7 @@
 				</c:when>
 				<c:otherwise>
 					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link" href="">공지사항</a></li>
+						<li class="nav-item"><a class="nav-link" href="/notice">공지사항</a></li>
 						<li class="nav-item"><a class="nav-link" href="/board">게시판</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="/board/saveForm">글쓰기</a></li>
@@ -72,7 +72,8 @@
 						<li class="nav-item"><a class="nav-link"
 							href="/user/updateForm">회원정보</a></li>
 						<c:if test="${principal.user.role eq 'ADMIN'}">
-							<li class="nav-item"><a class="nav-link" href="/notice/saveForm">공지관리</a></li>
+							<li class="nav-item"><a class="nav-link"
+								href="/notice/saveForm">공지관리</a></li>
 							<li class="nav-item"><a class="nav-link" href="/admin">쓰레기</a></li>
 						</c:if>
 						<li class="nav-item"><a class="nav-link" href="">일정</a></li>

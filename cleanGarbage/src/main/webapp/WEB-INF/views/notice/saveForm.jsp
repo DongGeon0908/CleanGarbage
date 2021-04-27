@@ -27,6 +27,6 @@
       });
 </script>
 
-<script src="/js/board.js"></script>
+<script src="/js/notice.js"></script>
 <%@ include file="../layout/footer.jsp"%>
 
