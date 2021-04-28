@@ -88,8 +88,6 @@ public class UserController {
 			return "redirect:/";
 		}
 	}
-	
-
 
 	// 데이터를 return하는 컨트롤러 함수
 	@GetMapping("/auth/kakao/callback")

@@ -37,9 +37,15 @@ public class NoticeController {
 	}
 
 	@GetMapping("/notice/{id}/updateForm")
-	public String updateForm(@PathVariable int id, Model model) {
-		model.addAttribute("notice", noticeService.공지사항상세보기(id));
-		return "notice/updateForm";
+	public String updateForm(@AuthenticationPrincipal PrincipalDetail principal, @PathVariable int id, Model model) {
+
+		if (principal.getUser().getRole() == RoleType.ADMIN) {
+			model.addAttribute("notice", noticeService.공지사항상세보기(id));
+			return "notice/updateForm";
+		} else {
+			return "redirect:/";
+		}
+
 	}
 
 	// 권한에 따라 페이지 변동 - > ADMIN 가능

@@ -3,5 +3,9 @@
     <fullyQualifiedTypeName name="com.cos.blogStudy.controller.UserController"/>
     <fullyQualifiedTypeName name="com.cos.blogStudy.model.RoleType"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.ColumnDefault"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.service.NoticeService"/>
     <fullyQualifiedTypeName name="com.cos.blogStudy.model.Notice"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.repository.NoticeRepository"/>
 </qualifiedTypeNameHistroy>

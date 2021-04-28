@@ -41,3 +41,11 @@ public class Like {
 	@CreationTimestamp
 	private Timestamp createDate;
 }
+
+
+/*
+ * 좋아요 버튼 로직
+ * 사용자가 좋아요 버튼을 누르면 데이터가 생성
+ * 만약, 데이터가 존재하는데 데이터를 누르는 경우에는 해당 튜플을 삭제함
+ * 화면에는 모든 데이터의 개수를 반환해서 보여주면 될것 같음
+ */
