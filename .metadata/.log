@@ -4767,3 +4767,18 @@ Binding(CTRL+SHIFT+C,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.lsp4e 1 0 2021-04-28 14:01:07.527
+!MESSAGE [Info]	ESLint server running in node v12.16.1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-28 14:03:00.981
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WVDZtPMO
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-28 14:03:00.982
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.WVDZtPMO
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-28 14:03:00.982
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-28 14:03:00.982
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.WVDZtPMO => OK

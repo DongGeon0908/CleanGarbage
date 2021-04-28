@@ -6,7 +6,7 @@
 
 <div class="container">
 	<button class="btn btn-secondary" onclick="history.back()">돌아가기</button>
-	<button class="btn btn-info">추천</button>
+	<button class="btn btn-info">😍</button>
 
 	<c:if
 		test="${board.user.id == principal.user.id || principal.user.role eq 'ADMIN'}">
