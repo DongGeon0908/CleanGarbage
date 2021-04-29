@@ -3,9 +3,25 @@
     <fullyQualifiedTypeName name="com.cos.blogStudy.controller.UserController"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.ColumnDefault"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="com.cos.blogStudy.service.NoticeService"/>
     <fullyQualifiedTypeName name="com.cos.blogStudy.model.Notice"/>
     <fullyQualifiedTypeName name="com.cos.blogStudy.repository.NoticeRepository"/>
     <fullyQualifiedTypeName name="com.cos.blogStudy.model.RoleType"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.repository.GoodRepository"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.repository.BoardRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.model.User"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.model.Board"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.model.Good"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.service.GoodService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.extern.slf4j.Slf4j"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.dto.ResponseDto"/>
 </qualifiedTypeNameHistroy>
