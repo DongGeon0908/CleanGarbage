@@ -6,7 +6,6 @@
 
 <div class="container">
 	<button class="btn btn-secondary" onclick="history.back()">돌아가기</button>
-	<button class="btn btn-info">😍</button>
 
 	<c:if
 		test="${board.user.id == principal.user.id || principal.user.role eq 'ADMIN'}">
@@ -14,6 +13,7 @@
 		<button id="btn-delete" class="btn btn-danger">삭제</button>
 		<a href="/board/saveForm" class="btn btn-success">글쓰기</a>
 	</c:if>
+	<button onClick="index.good(${board.id})" class="btn btn-info">😍</button>
 	<br /> <br />
 	<div>
 		글 번호 : <span id="id"><i>${board.id} </i></span> <br />
@@ -22,7 +22,8 @@
 		<br />
 		-->
 		작성자 : <span><i>${board.user.nickname}</i></span> <br /> 작성시간 : <span><i>${board.createDate}</i></span>
-		<br /> 추천수 : <span><i></i></span> <br /> 조회수 : <span><i>${board.count}</i></span>
+		<br /> 조회수 : <span><i>${board.count}</i></span> <br /> 좋아요 : <span><i>${good.id}</i></span>
+		<br />
 	</div>
 	<hr />
 	<br />

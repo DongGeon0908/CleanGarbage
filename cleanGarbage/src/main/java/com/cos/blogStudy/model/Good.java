@@ -41,6 +41,12 @@ public class Good {
 
 	@CreationTimestamp
 	private Timestamp createDate;
+
+	public Good(Board board, User user) {
+		this.board = board;
+		this.user = user;
+	}
+
 }
 
 /*
