@@ -46,6 +46,8 @@ public class Board {
 
 	private int count; // 조회수
 	
+	private int goodCount;
+	
 	@ManyToOne(fetch = FetchType.EAGER) // Many -> Board && User -> One
 	@JoinColumn(name="userId")
 	private User user; // JPA에서는 DB와 다르게 오브젝트를 저장할 수 있음
