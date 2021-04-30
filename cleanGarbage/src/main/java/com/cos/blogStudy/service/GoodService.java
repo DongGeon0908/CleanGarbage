@@ -20,27 +20,25 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Service
 public class GoodService {
-	
+
 	private final GoodRepository goodRepository;
-	
+
 	private final BoardRepository boardRepository;
 
 	public boolean addGood(User user, int Id) {
 		Board board = boardRepository.findById(Id).orElseThrow();
 
-		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>ddddd>>>" + board.getGoodCount());
-		
 		// 중복 좋아요 방지
 		if (isNotAlreadyGood(user, board)) {
 			goodRepository.save(new Good(board, user));
-			
+
 			board.setGoodCount(board.getGoodCount() + 1);
 			boardRepository.save(board);
 			return true;
 		} else {
-			// 해당 부분에서 문제 발생 --> 이유는 Board ID를 갖고오기 때문이다.
-			goodRepository.deleteById(Id);
-			
+			Good good = goodRepository.findByUserAndBoard(user, board).orElseThrow();
+			goodRepository.deleteById(good.getId());
+
 			board.setGoodCount(board.getGoodCount() - 1);
 			boardRepository.save(board);
 			return false;
