@@ -22,7 +22,7 @@
 		<br />
 		-->
 		작성자 : <span><i>${board.user.nickname}</i></span> <br /> 작성시간 : <span><i>${board.createDate}</i></span>
-		<br /> 조회수 : <span><i>${board.count}</i></span> <br /> 좋아요 : <span><i>${good.id}</i></span>
+		<br /> 조회수 : <span><i>${board.count}</i></span> <br /> 좋아요 : <span><i>${board.goodCount}</i></span>
 		<br />
 	</div>
 	<hr />
