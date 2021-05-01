@@ -5,6 +5,9 @@
 
 <div class="container">
 	채팅페이지
+	<div>
+	현재 접속중인 사용자
+	</div>
 </div>
 
 <%@ include file="../layout/footer.jsp"%>

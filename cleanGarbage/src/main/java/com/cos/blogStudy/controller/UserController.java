@@ -55,6 +55,11 @@ public class UserController {
 	public String joinForm() {
 		return "user/joinForm";
 	}
+	
+	@GetMapping("/auth/findIdForm")
+	public String findIdForm() {
+		return "user/findIdForm";
+	}
 
 	@GetMapping("/auth/loginForm")
 	public String loginForm() {
@@ -64,11 +69,6 @@ public class UserController {
 	@GetMapping("/user/updateForm")
 	public String updateForm() {
 		return "user/updateForm";
-	}
-
-	@GetMapping("/user/chat")
-	public String chat() {
-		return "user/chat";
 	}
 
 	/*

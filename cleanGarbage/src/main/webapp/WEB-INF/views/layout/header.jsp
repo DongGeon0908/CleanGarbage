@@ -43,6 +43,20 @@
 <!-- alert창 꾸미기 -->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+
+
+<!-- Calendar -->
+<link href='/packages/core/main.css' rel='stylesheet' />
+<link href='/packages/daygrid/main.css' rel='stylesheet' />
+<link href='/packages/timegrid/main.css' rel='stylesheet' />
+<link href='/packages/list/main.css' rel='stylesheet' />
+<script src='/packages/core/main.js'></script>
+<script src='/packages/interaction/main.js'></script>
+<script src='/packages/daygrid/main.js'></script>
+<script src='/packages/timegrid/main.js'></script>
+<script src='/packages/list/main.js'></script>
+
+
 </head>
 <body>
 
@@ -68,7 +82,7 @@
 						<li class="nav-item"><a class="nav-link" href="/board">게시판</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="/board/saveForm">글쓰기</a></li>
-						<li class="nav-item"><a class="nav-link" href="/user/chat">채팅</a></li>
+						<li class="nav-item"><a class="nav-link" href="/chat/chat">채팅</a></li>
 						<li class="nav-item"><a class="nav-link"
 							href="/user/updateForm">회원정보</a></li>
 						<c:if test="${principal.user.role eq 'ADMIN'}">
@@ -76,7 +90,7 @@
 								href="/notice/saveForm">공지관리</a></li>
 							<li class="nav-item"><a class="nav-link" href="/admin">쓰레기</a></li>
 						</c:if>
-						<li class="nav-item"><a class="nav-link" href="">일정</a></li>
+						<li class="nav-item"><a class="nav-link" href="/calendar">일정</a></li>
 						<li class="nav-item"><a class="nav-link" href="/logout">로그아웃</a></li>
 					</ul>
 				</c:otherwise>
