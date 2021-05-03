@@ -10,6 +10,7 @@
 			<div class="card-body">
 				<div>
 					<h4 class="card-title">${board.title}</h4>
+					<h6>👁 ${board.count}</h6>
 					<h6>😍 ${board.goodCount}</h6>
 				</div>
 				<a href="/board/${board.id}" class="btn btn-info">상세보기</a>
