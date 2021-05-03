@@ -27,4 +27,6 @@
     <fullyQualifiedTypeName name="com.cos.blogStudy.repository.UserRepository"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.model.Calendar"/>
+    <fullyQualifiedTypeName name="com.cos.blogStudy.repository.CalendarRepository"/>
 </qualifiedTypeNameHistroy>
