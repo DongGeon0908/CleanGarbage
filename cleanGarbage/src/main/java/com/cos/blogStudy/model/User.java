@@ -9,6 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
@@ -40,6 +41,9 @@ public class User {
 
 	@Column(length = 50)
 	private String nickname; // 별명
+	
+	@Lob // 대용량 데이터
+	private String profileImage; 
 
 	@Column(nullable = false, length = 100) // 해쉬값이 들어가서 길이가 길어야함
 	private String password;

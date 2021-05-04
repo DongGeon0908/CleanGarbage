@@ -55,7 +55,7 @@ public class UserController {
 	public String joinForm() {
 		return "user/joinForm";
 	}
-	
+
 	@GetMapping("/auth/findIdForm")
 	public String findIdForm() {
 		return "user/findIdForm";
@@ -166,12 +166,14 @@ public class UserController {
 
 		System.out.println("블로그 패스워드 : " + cosKey);
 
+		System.out.println("카카오 유저 사진 : " + kakaoProfile.getProperties().getProfile_image());
+
 		System.out.println("닉네임 : " + kakaoProfile.getProperties().getNickname());
 
 		User kakaouser = User.builder()
 				.username(kakaoProfile.getKakao_account().getEmail() + "_" + +kakaoProfile.getId()).password(cosKey)
 				.email(kakaoProfile.getKakao_account().getEmail()).nickname(kakaoProfile.getProperties().getNickname())
-				.oauth("kakao").build();
+				.oauth("kakao").profileImage(kakaoProfile.getProperties().getProfile_image()).build();
 
 		User originUser = userService.회원찾기(kakaouser.getUsername());
 

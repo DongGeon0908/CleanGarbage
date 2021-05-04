@@ -7,11 +7,16 @@
 <div class="container">
 	<form>
 		<input type="hidden" id="id" value="${principal.user.id}" />
+		<div class="form-group text-center">
+			<img src="${principal.user.profileImage}" class="rounded-circle"
+				width="304" height="236">
+		</div>
 		<div class="form-group">
 			<label for="username">Username:</label> <input type="text"
 				class="form-control" value="${principal.user.username}"
 				placeholder="Enter Username" id="username" readonly>
 		</div>
+
 
 		<c:if test="${principal.user.oauth eq 'default'}">
 			<div class="form-group">
