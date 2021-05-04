@@ -45,18 +45,6 @@
 
 
 
-<!-- Calendar -->
-<link href='/packages/core/main.css' rel='stylesheet' />
-<link href='/packages/daygrid/main.css' rel='stylesheet' />
-<link href='/packages/timegrid/main.css' rel='stylesheet' />
-<link href='/packages/list/main.css' rel='stylesheet' />
-<script src='/packages/core/main.js'></script>
-<script src='/packages/interaction/main.js'></script>
-<script src='/packages/daygrid/main.js'></script>
-<script src='/packages/timegrid/main.js'></script>
-<script src='/packages/list/main.js'></script>
-
-
 </head>
 <body>
 
@@ -90,7 +78,6 @@
 								href="/notice/saveForm">공지관리</a></li>
 							<li class="nav-item"><a class="nav-link" href="/admin">쓰레기</a></li>
 						</c:if>
-						<li class="nav-item"><a class="nav-link" href="/calendar">일정</a></li>
 						<li class="nav-item"><a class="nav-link" href="/logout">로그아웃</a></li>
 					</ul>
 				</c:otherwise>
