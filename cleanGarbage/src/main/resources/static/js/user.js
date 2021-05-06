@@ -17,7 +17,8 @@ let index = {
 			username: $("#username").val(),
 			password: $("#password").val(),
 			email: $("#email").val(),
-			nickname: $("#nickname").val()
+			nickname: $("#nickname").val(),
+			phone: $("#phone").val()
 		};
 
 		// console.log(data);
@@ -91,7 +92,8 @@ let index = {
 			username: $("#username").val(),
 			password: $("#password").val(),
 			email: $("#email").val(),
-			nickname: $("#nickname").val()
+			nickname: $("#nickname").val(),
+			phone: $("#phone").val()
 		};
 
 		// console.log(data);
@@ -108,13 +110,13 @@ let index = {
 			dataType: "json" // 요청을 서버로해서 응답이 왔을 때 기본적으로 모든 것이 문자열 -> 생긴게 JSON이면 javascript Object로 변환
 		}).done(function(resp) {
 			swal({
-					title: "Good job!",
-					text: "회원수정이 완료되었습니다!",
-					icon: "success",
-					button: "OK",
-				}).then(() => {
-					location.href = "/";
-				});
+				title: "Good job!",
+				text: "회원수정이 완료되었습니다!",
+				icon: "success",
+				button: "OK",
+			}).then(() => {
+				location.href = "/";
+			});
 		}).fail(function(error) {
 			alert(JSON.stringify(error));
 		}); // ajax 통신을 이용해서 3개의 데이터를 json으로 변경해서 insert 요청 진행!!

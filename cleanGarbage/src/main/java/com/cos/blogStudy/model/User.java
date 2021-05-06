@@ -41,15 +41,18 @@ public class User {
 
 	@Column(length = 50)
 	private String nickname; // 별명
-	
+
 	@Lob // 대용량 데이터
-	private String profileImage; 
+	private String profileImage;
 
 	@Column(nullable = false, length = 100) // 해쉬값이 들어가서 길이가 길어야함
 	private String password;
 
 	@Column(nullable = false, length = 50)
 	private String email;
+
+	@Column(length = 50)
+	private String phone;
 
 	// @ColumnDefault("'user'")
 	@Enumerated(EnumType.STRING) // DB에 해당 타입이 없기 때문에

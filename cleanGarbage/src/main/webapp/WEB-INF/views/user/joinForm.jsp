@@ -22,6 +22,10 @@
 			<label for="nickname">Nickname:</label> <input type="text"
 				class="form-control" placeholder="Enter nickname" id="nickname">
 		</div>
+		<div class="form-group">
+			<label for="phone">phone:</label> <input type="text"
+				class="form-control" placeholder="Enter nickname" id="phone">
+		</div>
 	</form>
 	<button id="btn-save" class="btn btn-primary">회원가입완료</button>
 </div>

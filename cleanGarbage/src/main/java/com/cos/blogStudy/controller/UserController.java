@@ -173,7 +173,7 @@ public class UserController {
 		User kakaouser = User.builder()
 				.username(kakaoProfile.getKakao_account().getEmail() + "_" + +kakaoProfile.getId()).password(cosKey)
 				.email(kakaoProfile.getKakao_account().getEmail()).nickname(kakaoProfile.getProperties().getNickname())
-				.oauth("kakao").profileImage(kakaoProfile.getProperties().getProfile_image()).build();
+				.oauth("kakao").phone(null).profileImage(kakaoProfile.getProperties().getProfile_image()).build();
 
 		User originUser = userService.회원찾기(kakaouser.getUsername());
 

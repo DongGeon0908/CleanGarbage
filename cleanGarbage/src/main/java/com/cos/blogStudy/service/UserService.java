@@ -69,7 +69,7 @@ public class UserService {
 		} else if (persistance.getOauth().equals("kakao")) {
 			persistance.setNickname(user.getNickname());
 		}
-
+		persistance.setPhone(user.getPhone());
 		// 회원수정 함수 종료 = 서비스 종료 = 트랜잭션 종료 = commit 자동 진행 = 영속화된 persistance 객체의 변화가 감지되면
 		// 더터체킹이 되어 update문 진행
 

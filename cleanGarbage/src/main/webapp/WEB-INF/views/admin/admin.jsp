@@ -16,6 +16,7 @@
 				<th>Username</th>
 				<th>Nickname</th>
 				<th>Email</th>
+				<th>Phone</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -28,6 +29,7 @@
 					<td>${user.username}</td>
 					<td>${user.nickname}</td>
 					<td>${user.email}</td>
+					<td>${user.phone}</td>
 					<td><a href="#" class="btn btn-info">회원관리</a></td>
 
 				</tr>

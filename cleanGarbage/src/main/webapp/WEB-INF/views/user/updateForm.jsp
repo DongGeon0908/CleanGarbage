@@ -16,7 +16,11 @@
 				class="form-control" value="${principal.user.username}"
 				placeholder="Enter Username" id="username" readonly>
 		</div>
-
+		<div class="form-group">
+			<label for="phone">Phone:</label> <input type="text"
+				class="form-control" value="${principal.user.phone}"
+				placeholder="Enter Phone" id="phone">
+		</div>
 
 		<c:if test="${principal.user.oauth eq 'default'}">
 			<div class="form-group">
