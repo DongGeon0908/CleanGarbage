@@ -3,6 +3,7 @@ package com.cos.blogStudy.service;
 import java.security.Principal;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,6 +23,7 @@ import com.cos.blogStudy.repository.UserRepository;
 @Service
 public class UserService {
 
+	
 	@Autowired
 	private UserRepository userRepository;
 
@@ -60,16 +62,18 @@ public class UserService {
 		});
 
 		// Validate 체크 ==>> 카카오 회원가입한 사용자는 개인정보 수정 불가
-		if (persistance.getOauth() == null || persistance.getOauth().equals("")) {
+		if (persistance.getOauth().equals("default")) {
 			String rawPassword = user.getPassword();
 			String encPassword = encoder.encode(rawPassword);
 			persistance.setNickname(user.getNickname());
 			persistance.setPassword(encPassword);
 			persistance.setEmail(user.getEmail());
-		} else if (persistance.getOauth().equals("kakao")) {
-			persistance.setNickname(user.getNickname());
+			persistance.setPhone(user.getPhone());
+		} else {
+			// 전화번호만 바꾸고 싶다.. 제발 --> 카카오 로그인한사람
+			persistance.setPhone(user.getPhone());
 		}
-		persistance.setPhone(user.getPhone());
+
 		// 회원수정 함수 종료 = 서비스 종료 = 트랜잭션 종료 = commit 자동 진행 = 영속화된 persistance 객체의 변화가 감지되면
 		// 더터체킹이 되어 update문 진행
 

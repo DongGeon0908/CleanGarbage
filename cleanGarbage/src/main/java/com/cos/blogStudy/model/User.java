@@ -51,7 +51,7 @@ public class User {
 	@Column(nullable = false, length = 50)
 	private String email;
 
-	@Column(length = 50)
+	@Column(length = 200)
 	private String phone;
 
 	// @ColumnDefault("'user'")

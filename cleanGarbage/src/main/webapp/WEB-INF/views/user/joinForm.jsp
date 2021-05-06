@@ -24,7 +24,7 @@
 		</div>
 		<div class="form-group">
 			<label for="phone">phone:</label> <input type="text"
-				class="form-control" placeholder="Enter nickname" id="phone">
+				class="form-control" placeholder="Enter phone" id="phone">
 		</div>
 	</form>
 	<button id="btn-save" class="btn btn-primary">회원가입완료</button>
