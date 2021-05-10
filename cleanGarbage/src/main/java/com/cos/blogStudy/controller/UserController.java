@@ -42,9 +42,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Controller
 public class UserController {
 
-	@Value("${cos.key}")
-	private String cosKey;
-
 	@Autowired
 	private AuthenticationManager authenticationManager;
 
@@ -56,9 +53,9 @@ public class UserController {
 		return "user/joinForm";
 	}
 
-	@GetMapping("/auth/findIdForm")
+	@GetMapping("/auth/findForm")
 	public String findIdForm() {
-		return "user/findIdForm";
+		return "user/findForm";
 	}
 
 	@GetMapping("/auth/loginForm")
@@ -164,16 +161,19 @@ public class UserController {
 		System.out.println("블로그 서버 유저네임 : " + kakaoProfile.getKakao_account().getEmail() + "_" + +kakaoProfile.getId());
 		System.out.println("블로그 서버 이메일 : " + kakaoProfile.getKakao_account().getEmail());
 
-		System.out.println("블로그 패스워드 : " + cosKey);
+		System.out.println("전화번호 : " + kakaoProfile.getKakao_account().getPhone_number());
+
+		System.out.println("블로그 패스워드 : " + kakaoProfile.getKakao_account().getEmail() + "_" + +kakaoProfile.getId());
 
 		System.out.println("카카오 유저 사진 : " + kakaoProfile.getProperties().getProfile_image());
 
 		System.out.println("닉네임 : " + kakaoProfile.getProperties().getNickname());
 
-		User kakaouser = User.builder()
-				.username(kakaoProfile.getKakao_account().getEmail() + "_" + +kakaoProfile.getId()).password(cosKey)
+		User kakaouser = User.builder().username(kakaoProfile.getKakao_account().getEmail())
+				.password(kakaoProfile.getKakao_account().getEmail() + "_" + kakaoProfile.getKakao_account().getEmail())
 				.email(kakaoProfile.getKakao_account().getEmail()).nickname(kakaoProfile.getProperties().getNickname())
-				.oauth("kakao").phone(null).profileImage(kakaoProfile.getProperties().getProfile_image()).build();
+				.oauth("kakao").phone(kakaoProfile.getKakao_account().getPhone_number())
+				.profileImage(kakaoProfile.getProperties().getProfile_image()).build();
 
 		User originUser = userService.회원찾기(kakaouser.getUsername());
 
@@ -188,8 +188,8 @@ public class UserController {
 		 */
 
 		// 세션 등록
-		Authentication authentication = authenticationManager
-				.authenticate(new UsernamePasswordAuthenticationToken(kakaouser.getUsername(), cosKey));
+		Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
+				kakaouser.getUsername(), kakaoProfile.getKakao_account().getEmail() + "_" + kakaoProfile.getKakao_account().getEmail()));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 
 		return "redirect:/";

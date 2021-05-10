@@ -45,7 +45,7 @@ public class User {
 	@Lob // 대용량 데이터
 	private String profileImage;
 
-	@Column(nullable = false, length = 100) // 해쉬값이 들어가서 길이가 길어야함
+	@Column(nullable = false, length = 1000) // 해쉬값이 들어가서 길이가 길어야함
 	private String password;
 
 	@Column(nullable = false, length = 50)
