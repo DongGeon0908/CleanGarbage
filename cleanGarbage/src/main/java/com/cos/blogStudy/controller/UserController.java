@@ -42,6 +42,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Controller
 public class UserController {
 
+	@Value("${cos.key}")
+	private String cosKey;
+
 	@Autowired
 	private AuthenticationManager authenticationManager;
 
@@ -169,8 +172,7 @@ public class UserController {
 
 		System.out.println("닉네임 : " + kakaoProfile.getProperties().getNickname());
 
-		User kakaouser = User.builder().username(kakaoProfile.getKakao_account().getEmail())
-				.password(kakaoProfile.getKakao_account().getEmail() + "_" + kakaoProfile.getKakao_account().getEmail())
+		User kakaouser = User.builder().username(kakaoProfile.getKakao_account().getEmail()).password(cosKey)
 				.email(kakaoProfile.getKakao_account().getEmail()).nickname(kakaoProfile.getProperties().getNickname())
 				.oauth("kakao").phone(kakaoProfile.getKakao_account().getPhone_number())
 				.profileImage(kakaoProfile.getProperties().getProfile_image()).build();
@@ -188,8 +190,8 @@ public class UserController {
 		 */
 
 		// 세션 등록
-		Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-				kakaouser.getUsername(), kakaoProfile.getKakao_account().getEmail() + "_" + kakaoProfile.getKakao_account().getEmail()));
+		Authentication authentication = authenticationManager
+				.authenticate(new UsernamePasswordAuthenticationToken(kakaouser.getUsername(), cosKey));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 
 		return "redirect:/";

@@ -23,6 +23,9 @@ import com.cos.blogStudy.repository.UserRepository;
 @Service
 public class UserService {
 
+	@Value("${cos.key}")
+	private String cosKey;
+
 	@Autowired
 	private UserRepository userRepository;
 
@@ -70,7 +73,7 @@ public class UserService {
 			persistance.setPhone(user.getPhone());
 		} else {
 			// 전화번호만 바꾸고 싶다.. 제발 --> 카카오 로그인한사람
-			String rawPassword = user.getEmail() + "_" + user.getEmail();
+			String rawPassword = cosKey;
 			String encPassword = encoder.encode(rawPassword);
 			persistance.setNickname(user.getNickname());
 			persistance.setPassword(encPassword);

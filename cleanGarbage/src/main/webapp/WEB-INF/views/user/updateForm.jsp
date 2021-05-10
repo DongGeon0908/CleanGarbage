@@ -36,7 +36,7 @@
 		<div class="form-group">
 			<label for="email">Email:</label> <input type="email"
 				class="form-control" value="${principal.user.email}"
-				placeholder="Enter email" id="email" readonly>
+				placeholder="Enter email" id="email">
 		</div>
 		<!-- 
 		<c:choose>
