@@ -10383,3 +10383,14 @@
 2021-05-10 16:55:45,629 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-05-10 16:55:45,630 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-05-10 16:55:45,630 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\study\cleanGarbage\cleanGarbage\src\test\resources
+2021-05-10 19:47:41,644 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-05-11 16:21:55,747 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-05-12 19:33:39,705 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-05-13 15:15:45,616 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-05-13 15:16:00,401 [Worker-9: Launching cleanGarbage - BlogStudyApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-13 15:16:00,401 [Worker-9: Launching cleanGarbage - BlogStudyApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-05-13 15:16:00,404 [Worker-9: Launching cleanGarbage - BlogStudyApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-05-13 15:16:00,431 [Worker-9: Launching cleanGarbage - BlogStudyApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2021-05-13 15:16:00,477 [Worker-9: Launching cleanGarbage - BlogStudyApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-13 15:16:00,478 [Worker-9: Launching cleanGarbage - BlogStudyApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-05-13 15:16:00,478 [Worker-9: Launching cleanGarbage - BlogStudyApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\study\cleanGarbage\cleanGarbage\src\test\resources
