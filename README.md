@@ -28,7 +28,19 @@
 
 ### 📸 Picture
 
+![](https://github.com/DongGeon0908/CleanGarbage/blob/main/img/1.png)
 
+![](https://github.com/DongGeon0908/CleanGarbage/blob/main/img/2.png)
+
+![](https://github.com/DongGeon0908/CleanGarbage/blob/main/img/3.png)
+
+![](https://github.com/DongGeon0908/CleanGarbage/blob/main/img/4.png)
+
+![](https://github.com/DongGeon0908/CleanGarbage/blob/main/img/5.png)
+
+![](https://github.com/DongGeon0908/CleanGarbage/blob/main/img/6.png)
+
+![](https://github.com/DongGeon0908/CleanGarbage/blob/main/img/7.png)
 
 <br>
 
@@ -47,7 +59,7 @@
 <br>
 
 ### 📚Database
-![]()
+![](https://github.com/DongGeon0908/CleanGarbage/blob/main/img/8.png)
 
 <br>
 
